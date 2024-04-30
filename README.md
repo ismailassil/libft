@@ -8,3 +8,7 @@
 - **Error Handling and Input Validation**: Robust error handling mechanisms and input validation to ensure reliability and safety in usage.
 - **Modular Design**: Organized into individual modules for ease of use and integration into projects, with each module focusing on a specific category of functionality.
 - **Test Suite**: Comprehensive test suite to verify the correctness and efficiency of each function, ensuring high-quality code.
+
+## Acknowledgements
+
+libft was developed by students at 1337School as part of their curriculum. Special thanks to the instructors and staff for their guidance and support.
