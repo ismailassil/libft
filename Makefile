@@ -6,7 +6,7 @@
 #    By: iassil <iassil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/06 13:40:42 by iassil            #+#    #+#              #
-#    Updated: 2023/11/16 09:13:52 by iassil           ###   ########.fr        #
+#    Updated: 2024/11/11 20:11:30 by iassil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,8 +40,9 @@ SRCB =	ft_lstnew_bonus.c		ft_lstadd_front_bonus.c		ft_lstsize_bonus.c		\
 		ft_lstclear_bonus.c		ft_lstiter_bonus.c			ft_lstmap_bonus.c		\
 		
 
-OBJECTF_FILES = $(SRCF:.c=.o)
-OBJECTB_FILES = $(SRCB:.c=.o)
+OBJECTF_FILES	= $(SRCF:.c=.o)
+OBJECTB_FILES	= $(SRCB:.c=.o)
+ALL_OBJ			= $(OBJECTB_FILES) $(OBJECTF_FILES)
 LIBFT_H = libft.h
 
 # Output File
@@ -55,8 +56,8 @@ all: $(NAME)
 $(NAME): $(OBJECTF_FILES)
 	$(AR) $(AR_FLAG) $@ $^
 
-bonus: $(NAME) $(OBJECTB_FILES)
-	$(AR) $(AR_FLAG) $< $^
+bonus: $(ALL_OBJ)
+	$(AR) $(AR_FLAG) $(NAME) $^
 	
 clean:
 	rm -f $(OBJECTF_FILES) $(OBJECTB_FILES)
